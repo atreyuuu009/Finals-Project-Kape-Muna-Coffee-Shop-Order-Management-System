@@ -1,0 +1,300 @@
+/* ========================
+   GLOBAL
+======================== */
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: #faf7f3;
+  color: #3e2723;
+}
+
+/* ========================
+   NAVBAR
+======================== */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 60px;
+  background: white;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+.logo {
+  font-size: 22px;
+  font-weight: 700;
+  color: #3e2723;
+}
+
+/* Nav container */
+.nav-links {
+  display: flex;
+  gap: 25px;
+  align-items: center;
+}
+
+/* Nav links */
+.nav-links a {
+  position: relative;
+  text-decoration: none;
+  color: #5d4037;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+/* Hover effect */
+.nav-links a:hover {
+  color: #ff8a3d;
+}
+
+/* Underline animation */
+.nav-links a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 0;
+  height: 2px;
+  background: #ff8a3d;
+  transition: width 0.3s ease;
+}
+
+.nav-links a:hover::after {
+  width: 100%;
+}
+
+/* Active link */
+.nav-links a.active {
+  color: #ff8a3d;
+}
+
+.nav-links a.active::after {
+  width: 100%;
+}
+
+/* ========================
+   HERO
+======================== */
+.hero {
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.hero h1 {
+  font-size: 42px;
+  margin-bottom: 10px;
+}
+
+.hero span {
+  color: #6d4c41;
+}
+
+/* ========================
+   FILTER SECTION
+======================== */
+.date-filter {
+  margin: 30px auto;
+  max-width: 900px;
+}
+
+.filter-pills {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+.filter-pill {
+  background: white;
+  padding: 10px 20px;
+  border-radius: 20px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.filter-pill:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+}
+
+.filter-pill.active {
+  background: #6d4c41;
+  color: white;
+}
+
+/* ========================
+   STATS SECTION
+======================== */
+.stats-section {
+  padding: 40px 60px;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+}
+
+.stat-card {
+  background: white;
+  border-radius: 20px;
+  padding: 25px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  transition: transform 0.3s ease;
+}
+
+.stat-card:hover {
+  transform: translateY(-5px);
+}
+
+.stat-icon {
+  width: 60px;
+  height: 60px;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+  background: #faf7f3;
+}
+
+.stat-label {
+  font-size: 13px;
+  color: #888;
+}
+
+.stat-value {
+  font-size: 28px;
+  margin: 6px 0;
+  color: #3e2723;
+}
+
+.stat-change.positive {
+  color: #27ae60;
+}
+
+.stat-change.negative {
+  color: #e74c3c;
+}
+
+/* ========================
+   CHARTS
+======================== */
+.charts-section {
+  padding: 40px 60px;
+}
+
+.charts-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 25px;
+}
+
+.chart-card {
+  background: white;
+  border-radius: 20px;
+  padding: 25px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+}
+
+.chart-container {
+  position: relative;
+  height: 300px;
+  width: 100%;
+}
+
+/* ========================
+   TABLE SECTION
+======================== */
+.menu {
+  padding: 40px 60px;
+}
+
+.table-container {
+  background: white;
+  border-radius: 20px;
+  padding: 30px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+thead {
+  background: #faf7f3;
+}
+
+th {
+  padding: 15px;
+  text-align: left;
+  font-weight: 600;
+  color: #5d4037;
+  font-size: 13px;
+  text-transform: uppercase;
+}
+
+td {
+  padding: 15px;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+tbody tr:hover {
+  background: #faf7f3;
+}
+
+/* ========================
+   STATUS BADGES
+======================== */
+.status-badge {
+  padding: 6px 12px;
+  border-radius: 15px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.status-completed {
+  background: #d4edda;
+  color: #155724;
+}
+
+.status-pending {
+  background: #fff3cd;
+  color: #856404;
+}
+
+.status-cancelled {
+  background: #f8d7da;
+  color: #721c24;
+}
+
+/* ========================
+   RESPONSIVE
+======================== */
+@media (max-width: 768px) {
+
+  .navbar {
+    padding: 20px 30px;
+  }
+
+  .stats-section,
+  .charts-section,
+  .menu {
+    padding: 20px 30px;
+  }
+
+  .charts-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .nav-links {
+    gap: 15px;
+  }
+}
